@@ -45,6 +45,22 @@
                     @endforeach
                 </tbody>
             </table>
+
+            <div class="pagination">
+                @if ($customers->onFirstPage())
+                    <span class="btn btn-small btn-secondary btn-disabled">Previous</span>
+                @else
+                    <a class="btn btn-small btn-secondary" href="{{ $customers->previousPageUrl() }}">Previous</a>
+                @endif
+
+                <span class="pagination-info">Page {{ $customers->currentPage() }} of {{ $customers->lastPage() }}</span>
+
+                @if ($customers->hasMorePages())
+                    <a class="btn btn-small btn-secondary" href="{{ $customers->nextPageUrl() }}">Next</a>
+                @else
+                    <span class="btn btn-small btn-secondary btn-disabled">Next</span>
+                @endif
+            </div>
         @endif
     </div>
 @endsection

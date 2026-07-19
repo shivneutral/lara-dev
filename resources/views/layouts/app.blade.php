@@ -26,6 +26,9 @@
         input { width: 100%; padding: 10px 12px; margin-bottom: 14px; border: 1px solid #d0d7de; border-radius: 8px; box-sizing: border-box; font-size: 14px; }
         .header-row { display: flex; align-items: center; justify-content: space-between; }
         .empty { color: #64748b; font-size: 14px; padding: 20px 0; }
+        .pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 20px; }
+        .pagination-info { color: #64748b; font-size: 14px; }
+        .btn-disabled { background: #cbd5e1; cursor: default; pointer-events: none; }
     </style>
 </head>
 <body>

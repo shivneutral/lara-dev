@@ -9,7 +9,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customer::latest()->get();
+        $customers = Customer::latest()->paginate(10)->withQueryString();
 
         return view('customers.index', [
             'customers' => $customers,
