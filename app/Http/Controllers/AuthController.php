@@ -34,10 +34,6 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        if (! session('user')) {
-            return redirect('/login');
-        }
-
         return view('auth.dashboard', [
             'user' => session('user'),
         ]);
